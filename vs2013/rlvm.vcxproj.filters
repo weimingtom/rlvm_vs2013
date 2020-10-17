@@ -1,0 +1,1776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{d167bbf5-d4fa-439b-aac3-d2bfee1b8cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glew">
+      <UniqueIdentifier>{1e1c1715-848e-43f4-bf0f-8279396dc100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glew\src">
+      <UniqueIdentifier>{5bf259b1-89dc-40c8-8e46-7ed2e10ba215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\guichan">
+      <UniqueIdentifier>{3f8f7100-918d-4ba5-acfd-066181f63efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\guichan\src">
+      <UniqueIdentifier>{2290fe15-987d-4a2c-8524-ba66e7a697cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\guichan\src\widgets">
+      <UniqueIdentifier>{0acbb5e0-8194-46d7-85e1-27dd5e33830a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\guichan\src\sdl">
+      <UniqueIdentifier>{2740258b-6e31-4937-8b43-c7c82ec95df3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_image">
+      <UniqueIdentifier>{69ab0fb5-420a-41be-9d50-b17db70069d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_image\src">
+      <UniqueIdentifier>{4af231a8-1e4f-45d9-a505-4ba8f024b826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_mixer">
+      <UniqueIdentifier>{832cc85c-6d34-4d9d-895b-691f328885fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_mixer\src">
+      <UniqueIdentifier>{01301f83-0479-4d9b-b043-9688f465e840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_ttf">
+      <UniqueIdentifier>{5c203cd0-28af-450e-8de1-f04b59f5e63d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL_ttf\src">
+      <UniqueIdentifier>{4975f3af-3024-4b08-a78d-b311ef6470d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\guichan\src\opengl">
+      <UniqueIdentifier>{c8a11aa1-a28c-4622-b551-0e1ffd22c5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\xclannad">
+      <UniqueIdentifier>{bdfeb587-7a45-4e1f-bccd-fba21826c396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\pygame">
+      <UniqueIdentifier>{39f20bf3-af1f-4ecb-a367-03ecd3223f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\libogg">
+      <UniqueIdentifier>{a42c9f93-5e27-45ee-ba57-d24460a94d1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\libvorbis">
+      <UniqueIdentifier>{1c171638-21f4-4d94-8503-8939f76252f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\SDL">
+      <UniqueIdentifier>{c1707120-0707-4182-a0db-73dc25330744}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="small.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="rlvm.ico">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rlvm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\wavestream.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\music_ogg.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_voc.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_ogg.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_aiff.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\effects_internal.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\SDL_mixer\src\dynamic_ogg.h">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\xclannad\dirent_impl.h">
+      <Filter>vendor\xclannad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\xclannad\endian.hpp">
+      <Filter>vendor\xclannad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\xclannad\file.h">
+      <Filter>vendor\xclannad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\xclannad\wavfile.h">
+      <Filter>vendor\xclannad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\pygame\alphablit.h">
+      <Filter>vendor\pygame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libogg-1.3.4\src\crctable.h">
+      <Filter>vendor\libogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\backends.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\bitrate.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\codebook.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\codec_internal.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\envelope.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\highlevel.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lookup.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lookup_data.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lpc.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lsp.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\masking.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\mdct.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\misc.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\os.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\psy.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\registry.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\scales.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\smallft.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\window.h">
+      <Filter>vendor\libvorbis</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rlvm_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\GLEW\src\glew.c">
+      <Filter>vendor\glew\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widget.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\selectionevent.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\rectangle.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\mouseinput.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\mouseevent.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\keyinput.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\keyevent.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\key.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\inputevent.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\imagefont.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\image.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\guichan.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\gui.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\genericinput.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\font.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\focushandler.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\event.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\defaultfont.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\color.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\cliprectangle.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\basiccontainer.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\actionevent.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\window.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\textfield.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\textbox.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\tabbedarea.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\tab.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\slider.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\scrollarea.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\radiobutton.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\listbox.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\label.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\imagebutton.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\icon.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\dropdown.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\container.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\checkbox.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\widgets\button.cpp">
+      <Filter>vendor\guichan\src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlinput.cpp">
+      <Filter>vendor\guichan\src\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlimageloader.cpp">
+      <Filter>vendor\guichan\src\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlimage.cpp">
+      <Filter>vendor\guichan\src\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlgraphics.cpp">
+      <Filter>vendor\guichan\src\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdl.cpp">
+      <Filter>vendor\guichan\src\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xxx.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xv.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xpm.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xcf.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_tif.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_tga.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_pnm.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_png.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_pcx.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_lbm.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_jpg.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_ImageIO.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_gif.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_bmp.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_image\src\IMG.c">
+      <Filter>vendor\SDL_image\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\wavestream.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\music_ogg.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\music.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\mixer.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_voc.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_ogg.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_aiff.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\effects_internal.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\effect_stereoreverse.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\effect_position.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_mixer\src\dynamic_ogg.c">
+      <Filter>vendor\SDL_mixer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL_ttf\src\SDL_ttf.c">
+      <Filter>vendor\SDL_ttf\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\opengl\opengl.cpp">
+      <Filter>vendor\guichan\src\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\opengl\openglgraphics.cpp">
+      <Filter>vendor\guichan\src\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\opengl\openglimage.cpp">
+      <Filter>vendor\guichan\src\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\xclannad\endian.cpp">
+      <Filter>vendor\xclannad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\xclannad\koedec_ogg.cc">
+      <Filter>vendor\xclannad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\xclannad\nwatowav.cc">
+      <Filter>vendor\xclannad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\xclannad\wavfile.cc">
+      <Filter>vendor\xclannad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\exception_.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\guichan\src\graphics_.cpp">
+      <Filter>vendor\guichan\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\xclannad\file_.cc">
+      <Filter>vendor\xclannad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\pygame\alphablit.cc">
+      <Filter>vendor\pygame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libogg-1.3.4\src\bitwise.c">
+      <Filter>vendor\libogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libogg-1.3.4\src\framing.c">
+      <Filter>vendor\libogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\analysis.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\barkmel.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\bitrate.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\block.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\codebook.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\envelope.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\floor0.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\floor1.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\info.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lookup.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lpc.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lsp.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\mapping0.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\mdct.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\psy.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\psytune.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\registry.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\res0.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\sharedbook.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\smallft.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\synthesis.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\tone.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\vorbisenc.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\vorbisfile.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\window.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\window_.c">
+      <Filter>vendor\libvorbis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\SDL-1.2.15\src\main\win32\SDL_win32_main.c">
+      <Filter>vendor\SDL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rlvm.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{99ea005e-3b38-4b43-9ee4-3b6136280609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{92ebe3d7-a190-4bc0-98e6-46967c15f03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\effects">
+      <UniqueIdentifier>{f73ef96d-2b8d-40ee-afc7-7c0c09b28b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\encodings">
+      <UniqueIdentifier>{f85d1954-cdd9-46f0-80b2-e4c0db169acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libreallive">
+      <UniqueIdentifier>{f1a836b2-9665-4c30-a5df-a7ba7d106b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\long_operations">
+      <UniqueIdentifier>{683fae03-7236-4f3e-9ebb-87377e7d3a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\machine">
+      <UniqueIdentifier>{eb31b813-8ef5-4d79-b4e5-c578fb45ae27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\machine\rloperation">
+      <UniqueIdentifier>{b57885f9-6cde-45fc-8d66-fb7751510035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules">
+      <UniqueIdentifier>{f0d56cb6-b8b9-4954-98c4-bee24a8722a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\platforms">
+      <UniqueIdentifier>{e9a8bd34-ab23-4f1e-93be-da016d908989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\platforms\gcn">
+      <UniqueIdentifier>{be0c80e3-0ad1-4c21-9ad7-0a51670c1665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\platforms\gtk">
+      <UniqueIdentifier>{be96cb11-c98a-4299-b5e5-9e9e4a452f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\platforms\osx">
+      <UniqueIdentifier>{444e204f-a804-42ba-a8e4-70dc4adbb205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilities">
+      <UniqueIdentifier>{4ca32abc-ac82-4e63-82d9-430602fe5ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\systems">
+      <UniqueIdentifier>{746ee6c5-5673-448e-9b17-049cfd1a3219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\systems\base">
+      <UniqueIdentifier>{0f84fb08-f28c-4c42-92d7-0f3bcabec079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\systems\sdl">
+      <UniqueIdentifier>{6469a512-ce40-40a3-952d-34c6c653da0e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\base\notification_details.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base\notification_registrar.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base\notification_service.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base\notification_source.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\blind_effect.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\effect.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\effect_factory.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\fade_effect.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\scroll_on_scroll_off.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\effects\wipe_effect.cc">
+      <Filter>src\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\codepage.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\cp932.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\cp936.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\cp949.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\han2zen.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encodings\western.cc">
+      <Filter>src\encodings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\archive.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\bytecode.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\compression.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\expression.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\filemap.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\gameexe.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\intmemref.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libreallive\scenario.cc">
+      <Filter>src\libreallive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\button_object_select_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\load_game_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\pause_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\select_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\textout_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\wait_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\long_operations\zoom_long_operation.cc">
+      <Filter>src\long_operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\dump_scenario.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\game_hacks.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\general_operations.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\long_operation.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\mapped_rlmodule.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\memory.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\memory_intmem.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\opcode_log.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\reallive_dll.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\reference.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\rlmachine.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\rlmodule.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\rloperation.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\rlvm_instance.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\save_game_header.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\serialization_global.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\serialization_local.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\machine\stack_frame.cc">
+      <Filter>src\machine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_bgm.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_bgr.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_debug.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_dll.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_event_loop.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_g00.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_gan.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_grp.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_jmp.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_koe.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_mem.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_mov.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_msg.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_obj.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_obj_creation.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_obj_fg_bg.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_obj_getters.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_obj_management.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_os.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_pcm.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_refresh.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_scr.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_se.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sel.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_shk.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_shl.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_str.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_date.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_frame.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_index_series.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_name.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_save.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_syscom.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_timer.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_timetable2.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\module_sys_wait.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\modules.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\object_module.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modules\object_mutator_operations.cc">
+      <Filter>src\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_button.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_graphics.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_info_window.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_menu.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_platform.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_save_load_window.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_scroll_area.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_true_type_font.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_utils.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gcn\gcn_window.cc">
+      <Filter>src\platforms\gcn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gtk\gtk_rlvm_instance.cc">
+      <Filter>src\platforms\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platforms\gtk\rlvm.cc">
+      <Filter>src\platforms\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\anm_graphics_object_data.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\cgm_table.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\colour.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\colour_filter_object_data.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\digits_graphics_object.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\drift_graphics_object.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\event_listener.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\event_system.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\frame_counter.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\gan_graphics_object_data.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_object.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_object_data.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_object_of_file.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_stack_frame.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_system.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\graphics_text_object.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\hik_renderer.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\hik_script.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\koepac_voice_archive.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\little_busters_ef00dll.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\little_busters_pt00dll.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\mouse_cursor.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\nwk_voice_archive.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\object_mutator.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\object_settings.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\ovk_voice_archive.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\ovk_voice_sample.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\parent_graphics_object_data.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\platform.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\rect.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\rlbabel_dll.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\rltimer.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\selection_element.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\sound_system.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\surface.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\system.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\system_error.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_key_cursor.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_page.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_system.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_waku.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_waku_normal.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_waku_type4.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_window.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\text_window_button.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\tomoyo_after_dt00dll.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\tone_curve.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\voice_archive.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\base\voice_cache.cc">
+      <Filter>src\systems\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_audio_locker.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_colour_filter.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_event_system.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_graphics_system.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_music.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_render_to_texture_surface.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_sound_chunk.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_sound_system.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_surface.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_system.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_text_system.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_text_window.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\sdl_utils.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\shaders.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\systems\sdl\texture.cc">
+      <Filter>src\systems\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\date_util.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\exception.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\file.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\find_font_file.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\graphics.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\math_util.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utilities\string_utilities.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\base\notification_details.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\notification_observer.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\notification_registrar.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\notification_service.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\notification_source.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\notification_type.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base\observer_list.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\blind_effect.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\effect.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\effect_factory.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\fade_effect.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\scroll_on_scroll_off.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\effects\wipe_effect.h">
+      <Filter>src\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\codepage.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\cp932.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\cp936.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\cp949.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\han2zen.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encodings\western.h">
+      <Filter>src\encodings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\alldefs.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\archive.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\bytecode.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\bytecode_fwd.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\compression.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\defs.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\expression.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\expression_pieces.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\filemap.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\gameexe.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\intmemref.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\reallive.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\scenario.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libreallive\scenario_internals.h">
+      <Filter>src\libreallive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\button_object_select_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\load_game_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\pause_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\select_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\textout_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\wait_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\long_operations\zoom_long_operation.h">
+      <Filter>src\long_operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\stack_frame.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\dump_scenario.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\game_hacks.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\general_operations.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\general_operations_impl.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\long_operation.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\mapped_rlmodule.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\memory.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\opcode_log.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\properties.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\reallive_dll.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\reference.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rlmachine.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rlmodule.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rlvm_instance.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\save_game_header.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\serialization.h">
+      <Filter>src\machine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\argc_t.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\complex_t.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\default_value.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\rect_t.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\references.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\rgb_colour_t.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\rlop_store.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\machine\rloperation\special_t.h">
+      <Filter>src\machine\rloperation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\object_mutator_operations.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_bgm.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_bgr.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_debug.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_dll.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_event_loop.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_g00.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_gan.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_grp.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_jmp.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_koe.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_mem.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_mov.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_msg.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_obj.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_obj_creation.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_obj_fg_bg.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_obj_getters.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_obj_management.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_os.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_pcm.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_refresh.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_scr.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_se.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sel.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_shk.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_shl.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_str.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_date.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_frame.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_index_series.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_name.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_save.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_syscom.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_timer.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_timetable2.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\module_sys_wait.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\modules.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modules\object_module.h">
+      <Filter>src\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_button.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_graphics.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_info_window.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_menu.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_platform.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_save_load_window.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_scroll_area.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_true_type_font.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_utils.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gcn\gcn_window.h">
+      <Filter>src\platforms\gcn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\gtk\gtk_rlvm_instance.h">
+      <Filter>src\platforms\gtk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\osx\CocoaRLVMInstance.h">
+      <Filter>src\platforms\osx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platforms\osx\SDLMain.h">
+      <Filter>src\platforms\osx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\voice_cache.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\anm_graphics_object_data.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\cgm_table.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\colour.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\colour_filter.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\colour_filter_object_data.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\digits_graphics_object.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\drift_graphics_object.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\event_listener.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\event_system.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\frame_counter.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\gan_graphics_object_data.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_object.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_object_data.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_object_of_file.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_stack_frame.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_system.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\graphics_text_object.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\hik_renderer.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\hik_script.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\koepac_voice_archive.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\little_busters_ef00dll.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\little_busters_pt00dll.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\mouse_cursor.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\nwk_voice_archive.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\object_mutator.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\object_settings.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\ovk_voice_archive.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\ovk_voice_sample.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\parent_graphics_object_data.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\platform.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\rect.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\renderable.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\rlbabel_dll.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\rltimer.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\rlvm_info.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\selection_element.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\sound_system.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\surface.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\system.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\system_error.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_key_cursor.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_page.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_system.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_waku.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_waku_normal.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_waku_type4.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_window.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\text_window_button.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\tomoyo_after_dt00dll.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\tone_curve.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\base\voice_archive.h">
+      <Filter>src\systems\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\texture.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_audio_locker.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_colour_filter.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_event_system.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_graphics_system.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_music.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_render_to_texture_surface.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_sound_chunk.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_sound_system.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_surface.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_system.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_text_system.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_text_window.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\sdl_utils.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\systems\sdl\shaders.h">
+      <Filter>src\systems\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\string_utilities.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\date_util.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\dynamic_bitset_serialize.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\exception.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\file.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\find_font_file.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\gettext.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\graphics.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\lazy_array.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utilities\math_util.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\libreallive\.gitignore">
+      <Filter>src\libreallive</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\vscroll_up_pressed.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\.gitignore">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\button.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\button_disabled.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\buttonhi.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\buttonpress.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\deepbox.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\hscroll_left_default.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\hscroll_left_pressed.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\hscroll_right_default.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\hscroll_right_pressed.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\vscroll_down_default.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\vscroll_down_pressed.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\vscroll_grey.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gcn\vscroll_up_default.png">
+      <Filter>src\platforms\gcn</Filter>
+    </None>
+    <None Include="..\src\platforms\gtk\rlvm.desktop">
+      <Filter>src\platforms\gtk</Filter>
+    </None>
+    <None Include="..\src\platforms\osx\StubInfoPlist.strings">
+      <Filter>src\platforms\osx</Filter>
+    </None>
+    <None Include="..\src\platforms\osx\CocoaRLVMInstance.mm">
+      <Filter>src\platforms\osx</Filter>
+    </None>
+    <None Include="..\src\platforms\osx\dmg-ds-store">
+      <Filter>src\platforms\osx</Filter>
+    </None>
+    <None Include="..\src\platforms\osx\Info.plist.in">
+      <Filter>src\platforms\osx</Filter>
+    </None>
+    <None Include="..\src\platforms\osx\SDLMain.mm">
+      <Filter>src\platforms\osx</Filter>
+    </None>
+    <None Include="..\src\systems\sdl\object.frag">
+      <Filter>src\systems\sdl</Filter>
+    </None>
+    <None Include="..\src\systems\sdl\subtractive.frag">
+      <Filter>src\systems\sdl</Filter>
+    </None>
+  </ItemGroup>
+</Project>

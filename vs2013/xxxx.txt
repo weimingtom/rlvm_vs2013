@@ -1,0 +1,157 @@
+  //(object.*setter_)(repno_, endval_);
+	switch (setter_) {
+	case GraphicsObject::func_SetXAdjustment: object.SetXAdjustment(repno_, endval_); break;
+	case GraphicsObject::func_SetYAdjustment: object.SetYAdjustment(repno_, endval_); break;
+	case GraphicsObject::func_SetAlphaAdjustment: object.SetAlphaAdjustment(repno_, endval_); break;
+	default: throw;
+	}
+	
+	
+	
+  //(object.*setter_)(value);
+  //(object.*setter_)(endval_);
+	switch (setter_) {
+	case GraphicsObject::func_SetX: object.SetX(endval_); break;
+	case GraphicsObject::func_SetY: object.SetY(endval_); break;
+	case GraphicsObject::func_SetAlpha: object.SetAlpha(endval_); break;
+	case GraphicsObject::func_SetMono: object.SetMono(endval_); break;
+	case GraphicsObject::func_SetInvert: object.SetInvert(endval_); break;
+	case GraphicsObject::func_SetLight: object.SetLight(endval_); break;
+	case GraphicsObject::func_SetTintRed: object.SetTintRed(endval_); break;
+	case GraphicsObject::func_SetTintGreen: object.SetTintGreen(endval_); break;
+	case GraphicsObject::func_SetTintBlue: object.SetTintBlue(endval_); break;
+	case GraphicsObject::func_SetColourRed: object.SetColourRed(endval_); break;
+	case GraphicsObject::func_SetColourGreen: object.SetColourGreen(endval_); break;
+	case GraphicsObject::func_SetColourBlue: object.SetColourBlue(endval_); break;
+	case GraphicsObject::func_SetColourLevel: object.SetColourLevel(endval_); break;
+	case GraphicsObject::func_SetVert: object.SetVert(endval_); break;
+	case GraphicsObject::func_SetWidth: object.SetWidth(endval_); break;
+	case GraphicsObject::func_SetHeight: object.SetHeight(endval_); break;
+	case GraphicsObject::func_SetRotation: object.SetRotation(endval_); break;
+	case GraphicsObject::func_SetRepOriginX: object.SetRepOriginX(endval_); break;
+	case GraphicsObject::func_SetRepOriginY: object.SetRepOriginY(endval_); break;
+	case GraphicsObject::func_SetOriginX: object.SetOriginX(endval_); break;
+	case GraphicsObject::func_SetOriginY: object.SetOriginY(endval_); break;
+	case GraphicsObject::func_SetHqWidth: object.SetHqWidth(endval_); break;
+	case GraphicsObject::func_SetHqHeight: object.SetHqHeight(endval_); break;
+	case GraphicsObject::func_SetVisible: object.SetVisible(endval_); break;	
+	case GraphicsObject::func_SetCompositeMode: object.SetCompositeMode(endval_); break;
+	case GraphicsObject::func_SetZLayer: object.SetZLayer(endval_); break;
+	case GraphicsObject::func_SetZDepth: object.SetZDepth(endval_); break;
+	case GraphicsObject::func_SetScrollRateX: object.SetScrollRateX(endval_); break;
+	case GraphicsObject::func_SetScrollRateY: object.SetScrollRateY(endval_); break;
+	case GraphicsObject::func_SetZOrder: object.SetZOrder(endval_); break;
+	case GraphicsObject::func_SetPattNo: object.SetPattNo(endval_); break;
+	case GraphicsObject::func_SetDigitValue: object.SetDigitValue(endval_); break;	
+	case GraphicsObject::func_SetButtonState: object.SetButtonState(endval_); break;
+	default: throw;
+	}
+	
+  
+
+
+//int startval = (obj.*getter_)();
+  int startval = 0;
+  switch (getter_) {
+  case GraphicsObject::func_x: startval = obj.x(); break;
+  case GraphicsObject::func_y: startval = obj.y(); break;
+  case GraphicsObject::func_raw_alpha: startval = obj.raw_alpha(); break;
+  case GraphicsObject::func_mono: startval = obj.mono(); break;
+  case GraphicsObject::func_invert: startval = obj.invert(); break;
+  case GraphicsObject::func_light: startval = obj.light(); break;
+  case GraphicsObject::func_tint_red: startval = obj.tint_red(); break;
+  case GraphicsObject::func_tint_green: startval = obj.tint_green(); break;
+  case GraphicsObject::func_tint_blue: startval = obj.tint_blue(); break;
+  case GraphicsObject::func_colour_red: startval = obj.colour_red(); break;
+  case GraphicsObject::func_colour_green: startval = obj.colour_green(); break;
+  case GraphicsObject::func_colour_blue: startval = obj.colour_blue(); break;
+  case GraphicsObject::func_colour_level: startval = obj.colour_level(); break;
+  case GraphicsObject::func_vert: startval = obj.vert(); break;
+  case GraphicsObject::func_width: startval = obj.width(); break;
+  case GraphicsObject::func_height: startval = obj.height(); break;
+  case GraphicsObject::func_rotation: startval = obj.rotation(); break;
+  case GraphicsObject::func_rep_origin_x: startval = obj.rep_origin_x(); break;
+  case GraphicsObject::func_rep_origin_y: startval = obj.rep_origin_y(); break;
+  case GraphicsObject::func_origin_x: startval = obj.origin_x(); break;
+  case GraphicsObject::func_origin_y: startval = obj.origin_y(); break;
+  case GraphicsObject::func_hq_width: startval = obj.hq_width(); break;
+  case GraphicsObject::func_hq_height: startval = obj.hq_height(); break;
+  case GraphicsObject::func_visible: startval = obj.visible(); break;  
+  case GraphicsObject::func_composite_mode: startval = obj.composite_mode(); break;
+  case GraphicsObject::func_z_layer: startval = obj.z_layer(); break;
+  case GraphicsObject::func_z_depth: startval = obj.z_depth(); break;
+  case GraphicsObject::func_scroll_rate_x: startval = obj.scroll_rate_x(); break;
+  case GraphicsObject::func_scroll_rate_y: startval = obj.scroll_rate_y(); break;
+  case GraphicsObject::func_z_order: startval = obj.z_order(); break;
+  case GraphicsObject::func_GetPattNo: startval = obj.GetPattNo(); break;
+  case GraphicsObject::func_GetDigitValue: startval = obj.GetDigitValue(); break;
+  case GraphicsObject::func_GetButtonState: startval = obj.GetButtonState(); break;
+  default: throw;
+  }
+  
+  
+  
+  //int startval = (obj.*getter_)(repno);
+  int startval = 0;
+  switch (getter_) {
+  case GraphicsObject::func_x_adjustment: startval = obj.x_adjustment(repno); break;
+  case GraphicsObject::func_y_adjustment: startval = obj.y_adjustment(repno); break;
+  case GraphicsObject::func_alpha_adjustment: startval = obj.alpha_adjustment(repno); break;
+  default: throw;
+  }
+  
+SetCompositeMode
+func_SetZLayer
+SetZDepth
+SetScrollRateX
+func_SetScrollRateY
+SetZOrder
+SetPattNo
+SetDigitValue
+SetPattNo
+
+
+
+		func_SetCompositeMode,
+		func_composite_mode,
+		func_SetZLayer,
+		func_z_layer,
+		func_SetZDepth,
+		func_z_depth,
+		func_SetScrollRateX,
+		func_scroll_rate_x,
+		func_SetScrollRateY,
+		func_scroll_rate_y,
+		func_SetZOrder,
+		func_z_order,
+		func_SetPattNo,
+		func_GetPattNo,
+		func_SetDigitValue,
+		func_GetDigitValue,
+		
+-------------------------------
+
+void ObjectModule::AddDoubleObjectCommands(int base_id,
+                                           const std::string& name,
+                                           NormalGetter getter_one,
+                                           NormalSetter setter_one,
+                                           NormalGetter getter_two,
+                                           NormalSetter setter_two) {
+  string base_name = prefix_ + name;
+  module_->AddOpcode(1000 + base_id, 0, base_name,
+                     new Obj_SetTwoIntOnObj(setter_one, setter_two));
+
+  string eve_name = prefix_ + "Eve" + name;
+  string base_eve_name = "objEve" + name;
+  module_->AddOpcode(2000 + base_id, 0, eve_name,
+                     new Obj_SetTwoIntOnObj(setter_one, setter_two));
+  
+  Op_ObjectMutatorIntInt *op = new Op_ObjectMutatorIntInt();
+  op->getter_one_ = getter_one;
+  op->setter_one_ = setter_one;
+  op->getter_two_ = getter_two;
+  op->setter_two_ = setter_two;
+  strncpy(op->name_, base_eve_name.c_str(), 256);
+  
+  
+  

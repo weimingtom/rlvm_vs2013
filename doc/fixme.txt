@@ -1,0 +1,15 @@
+#ifndef _MSC_VER //FIXME:???
+using std::make_pair;
+
+const IntegerBank_t LOCAL_INTEGER_BANKS = {
+    make_pair(libreallive::INTA_LOCATION, 'A'),
+    make_pair(libreallive::INTB_LOCATION, 'B'),
+    make_pair(libreallive::INTC_LOCATION, 'C'),
+    make_pair(libreallive::INTD_LOCATION, 'D'),
+    make_pair(libreallive::INTE_LOCATION, 'E'),
+    make_pair(libreallive::INTF_LOCATION, 'F')};
+
+const IntegerBank_t GLOBAL_INTEGER_BANKS = {
+  make_pair(libreallive::INTG_LOCATION, 'G'),
+  make_pair(libreallive::INTZ_LOCATION, 'Z')};
+#endif

@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D0987E2-B34B-4C07-AE83-59DEAA2F76EA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rlvm</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;WAV_MUSIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..;../src;../include;../include/SDL-1.2.15/include;../include/SDL-1.2.15/include/SDL;../vendor;../vendor/SDL_ttf/include;../vendor/SDL_ttf/include/SDL;../vendor/guichan/include;../vendor/SDL_image/include;../vendor/SDL_image/include/SDL;../vendor/SDL_mixer/include;../vendor/SDL_mixer/include/SDL;../vendor/freetype/include;../vendor/GLEW/include;../include/boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4090;4244;4800;4101;4018;4819;4373;4309;4996;4805;4305</DisableSpecificWarnings>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freetype.lib;glu32.lib;sdl.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4090;4244;4800;4101;4018;4819;4373;4309;4996;4805;4305</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="rlvm.ico" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vendor\libogg-1.3.4\src\crctable.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\backends.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\bitrate.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\codebook.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\codec_internal.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\envelope.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\highlevel.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lookup.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lookup_data.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lpc.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\lsp.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\masking.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\mdct.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\misc.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\os.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\psy.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\registry.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\scales.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\smallft.h" />
+    <ClInclude Include="..\vendor\libvorbis-1.3.7\lib\window.h" />
+    <ClInclude Include="..\vendor\pygame\alphablit.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\dynamic_ogg.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\effects_internal.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_aiff.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_ogg.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\load_voc.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\music_ogg.h" />
+    <ClInclude Include="..\vendor\SDL_mixer\src\wavestream.h" />
+    <ClInclude Include="..\vendor\xclannad\dirent_impl.h" />
+    <ClInclude Include="..\vendor\xclannad\endian.hpp" />
+    <ClInclude Include="..\vendor\xclannad\file.h" />
+    <ClInclude Include="..\vendor\xclannad\wavfile.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="rlvm.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vendor\GLEW\src\glew.c" />
+    <ClCompile Include="..\vendor\guichan\src\actionevent.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\basiccontainer.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\cliprectangle.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\color.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\defaultfont.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\event.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\exception_.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\focushandler.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\font.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\genericinput.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\graphics_.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\gui.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\guichan.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\image.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\imagefont.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\inputevent.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\key.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\keyevent.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\keyinput.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\mouseevent.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\mouseinput.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\opengl\opengl.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\opengl\openglgraphics.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\opengl\openglimage.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\rectangle.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdl.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlgraphics.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlimage.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlimageloader.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\sdl\sdlinput.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\selectionevent.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widget.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\button.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\checkbox.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\container.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\dropdown.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\icon.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\imagebutton.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\label.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\listbox.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\radiobutton.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\scrollarea.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\slider.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\tab.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\tabbedarea.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\textbox.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\textfield.cpp" />
+    <ClCompile Include="..\vendor\guichan\src\widgets\window.cpp" />
+    <ClCompile Include="..\vendor\libogg-1.3.4\src\bitwise.c" />
+    <ClCompile Include="..\vendor\libogg-1.3.4\src\framing.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\analysis.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\barkmel.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\bitrate.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\block.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\codebook.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\envelope.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\floor0.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\floor1.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\info.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lookup.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lpc.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\lsp.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\mapping0.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\mdct.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\psy.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\psytune.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\registry.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\res0.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\sharedbook.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\smallft.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\synthesis.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\tone.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\vorbisenc.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\vorbisfile.c" />
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\window.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\vendor\libvorbis-1.3.7\lib\window_.c" />
+    <ClCompile Include="..\vendor\pygame\alphablit.cc" />
+    <ClCompile Include="..\vendor\SDL-1.2.15\src\main\win32\SDL_win32_main.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_bmp.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_gif.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_ImageIO.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_jpg.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_lbm.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_pcx.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_png.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_pnm.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_tga.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_tif.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xcf.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xpm.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xv.c" />
+    <ClCompile Include="..\vendor\SDL_image\src\IMG_xxx.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\dynamic_ogg.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\effects_internal.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\effect_position.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\effect_stereoreverse.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_aiff.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_ogg.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\load_voc.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\mixer.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\music.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\music_ogg.c" />
+    <ClCompile Include="..\vendor\SDL_mixer\src\wavestream.c" />
+    <ClCompile Include="..\vendor\SDL_ttf\src\SDL_ttf.c" />
+    <ClCompile Include="..\vendor\xclannad\endian.cpp" />
+    <ClCompile Include="..\vendor\xclannad\file_.cc" />
+    <ClCompile Include="..\vendor\xclannad\koedec_ogg.cc" />
+    <ClCompile Include="..\vendor\xclannad\nwatowav.cc" />
+    <ClCompile Include="..\vendor\xclannad\wavfile.cc" />
+    <ClCompile Include="rlvm_test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rlvm.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\base\notification_details.cc" />
+    <ClCompile Include="..\src\base\notification_registrar.cc" />
+    <ClCompile Include="..\src\base\notification_service.cc" />
+    <ClCompile Include="..\src\base\notification_source.cc" />
+    <ClCompile Include="..\src\effects\blind_effect.cc" />
+    <ClCompile Include="..\src\effects\effect.cc" />
+    <ClCompile Include="..\src\effects\effect_factory.cc" />
+    <ClCompile Include="..\src\effects\fade_effect.cc" />
+    <ClCompile Include="..\src\effects\scroll_on_scroll_off.cc" />
+    <ClCompile Include="..\src\effects\wipe_effect.cc" />
+    <ClCompile Include="..\src\encodings\codepage.cc" />
+    <ClCompile Include="..\src\encodings\cp932.cc" />
+    <ClCompile Include="..\src\encodings\cp936.cc" />
+    <ClCompile Include="..\src\encodings\cp949.cc" />
+    <ClCompile Include="..\src\encodings\han2zen.cc" />
+    <ClCompile Include="..\src\encodings\western.cc" />
+    <ClCompile Include="..\src\libreallive\archive.cc" />
+    <ClCompile Include="..\src\libreallive\bytecode.cc" />
+    <ClCompile Include="..\src\libreallive\compression.cc" />
+    <ClCompile Include="..\src\libreallive\expression.cc" />
+    <ClCompile Include="..\src\libreallive\filemap.cc" />
+    <ClCompile Include="..\src\libreallive\gameexe.cc" />
+    <ClCompile Include="..\src\libreallive\intmemref.cc" />
+    <ClCompile Include="..\src\libreallive\scenario.cc" />
+    <ClCompile Include="..\src\long_operations\button_object_select_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\load_game_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\pause_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\select_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\textout_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\wait_long_operation.cc" />
+    <ClCompile Include="..\src\long_operations\zoom_long_operation.cc" />
+    <ClCompile Include="..\src\machine\dump_scenario.cc" />
+    <ClCompile Include="..\src\machine\game_hacks.cc" />
+    <ClCompile Include="..\src\machine\general_operations.cc" />
+    <ClCompile Include="..\src\machine\long_operation.cc" />
+    <ClCompile Include="..\src\machine\mapped_rlmodule.cc" />
+    <ClCompile Include="..\src\machine\memory.cc" />
+    <ClCompile Include="..\src\machine\memory_intmem.cc" />
+    <ClCompile Include="..\src\machine\opcode_log.cc" />
+    <ClCompile Include="..\src\machine\reallive_dll.cc" />
+    <ClCompile Include="..\src\machine\reference.cc" />
+    <ClCompile Include="..\src\machine\rlmachine.cc" />
+    <ClCompile Include="..\src\machine\rlmodule.cc" />
+    <ClCompile Include="..\src\machine\rloperation.cc" />
+    <ClCompile Include="..\src\machine\rlvm_instance.cc" />
+    <ClCompile Include="..\src\machine\save_game_header.cc" />
+    <ClCompile Include="..\src\machine\serialization_global.cc" />
+    <ClCompile Include="..\src\machine\serialization_local.cc" />
+    <ClCompile Include="..\src\machine\stack_frame.cc" />
+    <ClCompile Include="..\src\modules\modules.cc" />
+    <ClCompile Include="..\src\modules\module_bgm.cc" />
+    <ClCompile Include="..\src\modules\module_bgr.cc" />
+    <ClCompile Include="..\src\modules\module_debug.cc" />
+    <ClCompile Include="..\src\modules\module_dll.cc" />
+    <ClCompile Include="..\src\modules\module_event_loop.cc" />
+    <ClCompile Include="..\src\modules\module_g00.cc" />
+    <ClCompile Include="..\src\modules\module_gan.cc" />
+    <ClCompile Include="..\src\modules\module_grp.cc" />
+    <ClCompile Include="..\src\modules\module_jmp.cc" />
+    <ClCompile Include="..\src\modules\module_koe.cc" />
+    <ClCompile Include="..\src\modules\module_mem.cc" />
+    <ClCompile Include="..\src\modules\module_mov.cc" />
+    <ClCompile Include="..\src\modules\module_msg.cc" />
+    <ClCompile Include="..\src\modules\module_obj.cc" />
+    <ClCompile Include="..\src\modules\module_obj_creation.cc" />
+    <ClCompile Include="..\src\modules\module_obj_fg_bg.cc" />
+    <ClCompile Include="..\src\modules\module_obj_getters.cc" />
+    <ClCompile Include="..\src\modules\module_obj_management.cc" />
+    <ClCompile Include="..\src\modules\module_os.cc" />
+    <ClCompile Include="..\src\modules\module_pcm.cc" />
+    <ClCompile Include="..\src\modules\module_refresh.cc" />
+    <ClCompile Include="..\src\modules\module_scr.cc" />
+    <ClCompile Include="..\src\modules\module_se.cc" />
+    <ClCompile Include="..\src\modules\module_sel.cc" />
+    <ClCompile Include="..\src\modules\module_shk.cc" />
+    <ClCompile Include="..\src\modules\module_shl.cc" />
+    <ClCompile Include="..\src\modules\module_str.cc" />
+    <ClCompile Include="..\src\modules\module_sys.cc" />
+    <ClCompile Include="..\src\modules\module_sys_date.cc" />
+    <ClCompile Include="..\src\modules\module_sys_frame.cc" />
+    <ClCompile Include="..\src\modules\module_sys_index_series.cc" />
+    <ClCompile Include="..\src\modules\module_sys_name.cc" />
+    <ClCompile Include="..\src\modules\module_sys_save.cc" />
+    <ClCompile Include="..\src\modules\module_sys_syscom.cc" />
+    <ClCompile Include="..\src\modules\module_sys_timer.cc" />
+    <ClCompile Include="..\src\modules\module_sys_timetable2.cc" />
+    <ClCompile Include="..\src\modules\module_sys_wait.cc" />
+    <ClCompile Include="..\src\modules\object_module.cc" />
+    <ClCompile Include="..\src\modules\object_mutator_operations.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_button.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_graphics.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_info_window.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_menu.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_platform.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_save_load_window.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_scroll_area.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_true_type_font.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_utils.cc" />
+    <ClCompile Include="..\src\platforms\gcn\gcn_window.cc" />
+    <ClCompile Include="..\src\platforms\gtk\gtk_rlvm_instance.cc" />
+    <ClCompile Include="..\src\platforms\gtk\rlvm.cc" />
+    <ClCompile Include="..\src\systems\base\anm_graphics_object_data.cc" />
+    <ClCompile Include="..\src\systems\base\cgm_table.cc" />
+    <ClCompile Include="..\src\systems\base\colour.cc" />
+    <ClCompile Include="..\src\systems\base\colour_filter_object_data.cc" />
+    <ClCompile Include="..\src\systems\base\digits_graphics_object.cc" />
+    <ClCompile Include="..\src\systems\base\drift_graphics_object.cc" />
+    <ClCompile Include="..\src\systems\base\event_listener.cc" />
+    <ClCompile Include="..\src\systems\base\event_system.cc" />
+    <ClCompile Include="..\src\systems\base\frame_counter.cc" />
+    <ClCompile Include="..\src\systems\base\gan_graphics_object_data.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_object.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_object_data.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_object_of_file.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_stack_frame.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_system.cc" />
+    <ClCompile Include="..\src\systems\base\graphics_text_object.cc" />
+    <ClCompile Include="..\src\systems\base\hik_renderer.cc" />
+    <ClCompile Include="..\src\systems\base\hik_script.cc" />
+    <ClCompile Include="..\src\systems\base\koepac_voice_archive.cc" />
+    <ClCompile Include="..\src\systems\base\little_busters_ef00dll.cc" />
+    <ClCompile Include="..\src\systems\base\little_busters_pt00dll.cc" />
+    <ClCompile Include="..\src\systems\base\mouse_cursor.cc" />
+    <ClCompile Include="..\src\systems\base\nwk_voice_archive.cc" />
+    <ClCompile Include="..\src\systems\base\object_mutator.cc" />
+    <ClCompile Include="..\src\systems\base\object_settings.cc" />
+    <ClCompile Include="..\src\systems\base\ovk_voice_archive.cc" />
+    <ClCompile Include="..\src\systems\base\ovk_voice_sample.cc" />
+    <ClCompile Include="..\src\systems\base\parent_graphics_object_data.cc" />
+    <ClCompile Include="..\src\systems\base\platform.cc" />
+    <ClCompile Include="..\src\systems\base\rect.cc" />
+    <ClCompile Include="..\src\systems\base\rlbabel_dll.cc" />
+    <ClCompile Include="..\src\systems\base\rltimer.cc" />
+    <ClCompile Include="..\src\systems\base\selection_element.cc" />
+    <ClCompile Include="..\src\systems\base\sound_system.cc" />
+    <ClCompile Include="..\src\systems\base\surface.cc" />
+    <ClCompile Include="..\src\systems\base\system.cc" />
+    <ClCompile Include="..\src\systems\base\system_error.cc" />
+    <ClCompile Include="..\src\systems\base\text_key_cursor.cc" />
+    <ClCompile Include="..\src\systems\base\text_page.cc" />
+    <ClCompile Include="..\src\systems\base\text_system.cc" />
+    <ClCompile Include="..\src\systems\base\text_waku.cc" />
+    <ClCompile Include="..\src\systems\base\text_waku_normal.cc" />
+    <ClCompile Include="..\src\systems\base\text_waku_type4.cc" />
+    <ClCompile Include="..\src\systems\base\text_window.cc" />
+    <ClCompile Include="..\src\systems\base\text_window_button.cc" />
+    <ClCompile Include="..\src\systems\base\tomoyo_after_dt00dll.cc" />
+    <ClCompile Include="..\src\systems\base\tone_curve.cc" />
+    <ClCompile Include="..\src\systems\base\voice_archive.cc" />
+    <ClCompile Include="..\src\systems\base\voice_cache.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_audio_locker.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_colour_filter.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_event_system.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_graphics_system.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_music.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_render_to_texture_surface.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_sound_chunk.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_sound_system.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_surface.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_system.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_text_system.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_text_window.cc" />
+    <ClCompile Include="..\src\systems\sdl\sdl_utils.cc" />
+    <ClCompile Include="..\src\systems\sdl\shaders.cc" />
+    <ClCompile Include="..\src\systems\sdl\texture.cc" />
+    <ClCompile Include="..\src\utilities\date_util.cc" />
+    <ClCompile Include="..\src\utilities\exception.cc" />
+    <ClCompile Include="..\src\utilities\file.cc" />
+    <ClCompile Include="..\src\utilities\find_font_file.cc" />
+    <ClCompile Include="..\src\utilities\graphics.cc" />
+    <ClCompile Include="..\src\utilities\math_util.cc" />
+    <ClCompile Include="..\src\utilities\string_utilities.cc" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\base\notification_details.h" />
+    <ClInclude Include="..\src\base\notification_observer.h" />
+    <ClInclude Include="..\src\base\notification_registrar.h" />
+    <ClInclude Include="..\src\base\notification_service.h" />
+    <ClInclude Include="..\src\base\notification_source.h" />
+    <ClInclude Include="..\src\base\notification_type.h" />
+    <ClInclude Include="..\src\base\observer_list.h" />
+    <ClInclude Include="..\src\effects\blind_effect.h" />
+    <ClInclude Include="..\src\effects\effect.h" />
+    <ClInclude Include="..\src\effects\effect_factory.h" />
+    <ClInclude Include="..\src\effects\fade_effect.h" />
+    <ClInclude Include="..\src\effects\scroll_on_scroll_off.h" />
+    <ClInclude Include="..\src\effects\wipe_effect.h" />
+    <ClInclude Include="..\src\encodings\codepage.h" />
+    <ClInclude Include="..\src\encodings\cp932.h" />
+    <ClInclude Include="..\src\encodings\cp936.h" />
+    <ClInclude Include="..\src\encodings\cp949.h" />
+    <ClInclude Include="..\src\encodings\han2zen.h" />
+    <ClInclude Include="..\src\encodings\western.h" />
+    <ClInclude Include="..\src\libreallive\alldefs.h" />
+    <ClInclude Include="..\src\libreallive\archive.h" />
+    <ClInclude Include="..\src\libreallive\bytecode.h" />
+    <ClInclude Include="..\src\libreallive\bytecode_fwd.h" />
+    <ClInclude Include="..\src\libreallive\compression.h" />
+    <ClInclude Include="..\src\libreallive\defs.h" />
+    <ClInclude Include="..\src\libreallive\expression.h" />
+    <ClInclude Include="..\src\libreallive\expression_pieces.h" />
+    <ClInclude Include="..\src\libreallive\filemap.h" />
+    <ClInclude Include="..\src\libreallive\gameexe.h" />
+    <ClInclude Include="..\src\libreallive\intmemref.h" />
+    <ClInclude Include="..\src\libreallive\reallive.h" />
+    <ClInclude Include="..\src\libreallive\scenario.h" />
+    <ClInclude Include="..\src\libreallive\scenario_internals.h" />
+    <ClInclude Include="..\src\long_operations\button_object_select_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\load_game_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\pause_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\select_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\textout_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\wait_long_operation.h" />
+    <ClInclude Include="..\src\long_operations\zoom_long_operation.h" />
+    <ClInclude Include="..\src\machine\dump_scenario.h" />
+    <ClInclude Include="..\src\machine\game_hacks.h" />
+    <ClInclude Include="..\src\machine\general_operations.h" />
+    <ClInclude Include="..\src\machine\general_operations_impl.h" />
+    <ClInclude Include="..\src\machine\long_operation.h" />
+    <ClInclude Include="..\src\machine\mapped_rlmodule.h" />
+    <ClInclude Include="..\src\machine\memory.h" />
+    <ClInclude Include="..\src\machine\opcode_log.h" />
+    <ClInclude Include="..\src\machine\properties.h" />
+    <ClInclude Include="..\src\machine\reallive_dll.h" />
+    <ClInclude Include="..\src\machine\reference.h" />
+    <ClInclude Include="..\src\machine\rlmachine.h" />
+    <ClInclude Include="..\src\machine\rlmodule.h" />
+    <ClInclude Include="..\src\machine\rloperation.h" />
+    <ClInclude Include="..\src\machine\rloperation\argc_t.h" />
+    <ClInclude Include="..\src\machine\rloperation\complex_t.h" />
+    <ClInclude Include="..\src\machine\rloperation\default_value.h" />
+    <ClInclude Include="..\src\machine\rloperation\rect_t.h" />
+    <ClInclude Include="..\src\machine\rloperation\references.h" />
+    <ClInclude Include="..\src\machine\rloperation\rgb_colour_t.h" />
+    <ClInclude Include="..\src\machine\rloperation\rlop_store.h" />
+    <ClInclude Include="..\src\machine\rloperation\special_t.h" />
+    <ClInclude Include="..\src\machine\rlvm_instance.h" />
+    <ClInclude Include="..\src\machine\save_game_header.h" />
+    <ClInclude Include="..\src\machine\serialization.h" />
+    <ClInclude Include="..\src\machine\stack_frame.h" />
+    <ClInclude Include="..\src\modules\modules.h" />
+    <ClInclude Include="..\src\modules\module_bgm.h" />
+    <ClInclude Include="..\src\modules\module_bgr.h" />
+    <ClInclude Include="..\src\modules\module_debug.h" />
+    <ClInclude Include="..\src\modules\module_dll.h" />
+    <ClInclude Include="..\src\modules\module_event_loop.h" />
+    <ClInclude Include="..\src\modules\module_g00.h" />
+    <ClInclude Include="..\src\modules\module_gan.h" />
+    <ClInclude Include="..\src\modules\module_grp.h" />
+    <ClInclude Include="..\src\modules\module_jmp.h" />
+    <ClInclude Include="..\src\modules\module_koe.h" />
+    <ClInclude Include="..\src\modules\module_mem.h" />
+    <ClInclude Include="..\src\modules\module_mov.h" />
+    <ClInclude Include="..\src\modules\module_msg.h" />
+    <ClInclude Include="..\src\modules\module_obj.h" />
+    <ClInclude Include="..\src\modules\module_obj_creation.h" />
+    <ClInclude Include="..\src\modules\module_obj_fg_bg.h" />
+    <ClInclude Include="..\src\modules\module_obj_getters.h" />
+    <ClInclude Include="..\src\modules\module_obj_management.h" />
+    <ClInclude Include="..\src\modules\module_os.h" />
+    <ClInclude Include="..\src\modules\module_pcm.h" />
+    <ClInclude Include="..\src\modules\module_refresh.h" />
+    <ClInclude Include="..\src\modules\module_scr.h" />
+    <ClInclude Include="..\src\modules\module_se.h" />
+    <ClInclude Include="..\src\modules\module_sel.h" />
+    <ClInclude Include="..\src\modules\module_shk.h" />
+    <ClInclude Include="..\src\modules\module_shl.h" />
+    <ClInclude Include="..\src\modules\module_str.h" />
+    <ClInclude Include="..\src\modules\module_sys.h" />
+    <ClInclude Include="..\src\modules\module_sys_date.h" />
+    <ClInclude Include="..\src\modules\module_sys_frame.h" />
+    <ClInclude Include="..\src\modules\module_sys_index_series.h" />
+    <ClInclude Include="..\src\modules\module_sys_name.h" />
+    <ClInclude Include="..\src\modules\module_sys_save.h" />
+    <ClInclude Include="..\src\modules\module_sys_syscom.h" />
+    <ClInclude Include="..\src\modules\module_sys_timer.h" />
+    <ClInclude Include="..\src\modules\module_sys_timetable2.h" />
+    <ClInclude Include="..\src\modules\module_sys_wait.h" />
+    <ClInclude Include="..\src\modules\object_module.h" />
+    <ClInclude Include="..\src\modules\object_mutator_operations.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_button.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_graphics.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_info_window.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_menu.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_platform.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_save_load_window.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_scroll_area.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_true_type_font.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_utils.h" />
+    <ClInclude Include="..\src\platforms\gcn\gcn_window.h" />
+    <ClInclude Include="..\src\platforms\gtk\gtk_rlvm_instance.h" />
+    <ClInclude Include="..\src\platforms\osx\CocoaRLVMInstance.h" />
+    <ClInclude Include="..\src\platforms\osx\SDLMain.h" />
+    <ClInclude Include="..\src\systems\base\anm_graphics_object_data.h" />
+    <ClInclude Include="..\src\systems\base\cgm_table.h" />
+    <ClInclude Include="..\src\systems\base\colour.h" />
+    <ClInclude Include="..\src\systems\base\colour_filter.h" />
+    <ClInclude Include="..\src\systems\base\colour_filter_object_data.h" />
+    <ClInclude Include="..\src\systems\base\digits_graphics_object.h" />
+    <ClInclude Include="..\src\systems\base\drift_graphics_object.h" />
+    <ClInclude Include="..\src\systems\base\event_listener.h" />
+    <ClInclude Include="..\src\systems\base\event_system.h" />
+    <ClInclude Include="..\src\systems\base\frame_counter.h" />
+    <ClInclude Include="..\src\systems\base\gan_graphics_object_data.h" />
+    <ClInclude Include="..\src\systems\base\graphics_object.h" />
+    <ClInclude Include="..\src\systems\base\graphics_object_data.h" />
+    <ClInclude Include="..\src\systems\base\graphics_object_of_file.h" />
+    <ClInclude Include="..\src\systems\base\graphics_stack_frame.h" />
+    <ClInclude Include="..\src\systems\base\graphics_system.h" />
+    <ClInclude Include="..\src\systems\base\graphics_text_object.h" />
+    <ClInclude Include="..\src\systems\base\hik_renderer.h" />
+    <ClInclude Include="..\src\systems\base\hik_script.h" />
+    <ClInclude Include="..\src\systems\base\koepac_voice_archive.h" />
+    <ClInclude Include="..\src\systems\base\little_busters_ef00dll.h" />
+    <ClInclude Include="..\src\systems\base\little_busters_pt00dll.h" />
+    <ClInclude Include="..\src\systems\base\mouse_cursor.h" />
+    <ClInclude Include="..\src\systems\base\nwk_voice_archive.h" />
+    <ClInclude Include="..\src\systems\base\object_mutator.h" />
+    <ClInclude Include="..\src\systems\base\object_settings.h" />
+    <ClInclude Include="..\src\systems\base\ovk_voice_archive.h" />
+    <ClInclude Include="..\src\systems\base\ovk_voice_sample.h" />
+    <ClInclude Include="..\src\systems\base\parent_graphics_object_data.h" />
+    <ClInclude Include="..\src\systems\base\platform.h" />
+    <ClInclude Include="..\src\systems\base\rect.h" />
+    <ClInclude Include="..\src\systems\base\renderable.h" />
+    <ClInclude Include="..\src\systems\base\rlbabel_dll.h" />
+    <ClInclude Include="..\src\systems\base\rltimer.h" />
+    <ClInclude Include="..\src\systems\base\rlvm_info.h" />
+    <ClInclude Include="..\src\systems\base\selection_element.h" />
+    <ClInclude Include="..\src\systems\base\sound_system.h" />
+    <ClInclude Include="..\src\systems\base\surface.h" />
+    <ClInclude Include="..\src\systems\base\system.h" />
+    <ClInclude Include="..\src\systems\base\system_error.h" />
+    <ClInclude Include="..\src\systems\base\text_key_cursor.h" />
+    <ClInclude Include="..\src\systems\base\text_page.h" />
+    <ClInclude Include="..\src\systems\base\text_system.h" />
+    <ClInclude Include="..\src\systems\base\text_waku.h" />
+    <ClInclude Include="..\src\systems\base\text_waku_normal.h" />
+    <ClInclude Include="..\src\systems\base\text_waku_type4.h" />
+    <ClInclude Include="..\src\systems\base\text_window.h" />
+    <ClInclude Include="..\src\systems\base\text_window_button.h" />
+    <ClInclude Include="..\src\systems\base\tomoyo_after_dt00dll.h" />
+    <ClInclude Include="..\src\systems\base\tone_curve.h" />
+    <ClInclude Include="..\src\systems\base\voice_archive.h" />
+    <ClInclude Include="..\src\systems\base\voice_cache.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_audio_locker.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_colour_filter.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_event_system.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_graphics_system.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_music.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_render_to_texture_surface.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_sound_chunk.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_sound_system.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_surface.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_system.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_text_system.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_text_window.h" />
+    <ClInclude Include="..\src\systems\sdl\sdl_utils.h" />
+    <ClInclude Include="..\src\systems\sdl\shaders.h" />
+    <ClInclude Include="..\src\systems\sdl\texture.h" />
+    <ClInclude Include="..\src\utilities\date_util.h" />
+    <ClInclude Include="..\src\utilities\dynamic_bitset_serialize.h" />
+    <ClInclude Include="..\src\utilities\exception.h" />
+    <ClInclude Include="..\src\utilities\file.h" />
+    <ClInclude Include="..\src\utilities\find_font_file.h" />
+    <ClInclude Include="..\src\utilities\gettext.h" />
+    <ClInclude Include="..\src\utilities\graphics.h" />
+    <ClInclude Include="..\src\utilities\lazy_array.h" />
+    <ClInclude Include="..\src\utilities\math_util.h" />
+    <ClInclude Include="..\src\utilities\string_utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\libreallive\.gitignore" />
+    <None Include="..\src\platforms\gcn\.gitignore" />
+    <None Include="..\src\platforms\gcn\button.png" />
+    <None Include="..\src\platforms\gcn\buttonhi.png" />
+    <None Include="..\src\platforms\gcn\buttonpress.png" />
+    <None Include="..\src\platforms\gcn\button_disabled.png" />
+    <None Include="..\src\platforms\gcn\deepbox.png" />
+    <None Include="..\src\platforms\gcn\hscroll_left_default.png" />
+    <None Include="..\src\platforms\gcn\hscroll_left_pressed.png" />
+    <None Include="..\src\platforms\gcn\hscroll_right_default.png" />
+    <None Include="..\src\platforms\gcn\hscroll_right_pressed.png" />
+    <None Include="..\src\platforms\gcn\vscroll_down_default.png" />
+    <None Include="..\src\platforms\gcn\vscroll_down_pressed.png" />
+    <None Include="..\src\platforms\gcn\vscroll_grey.png" />
+    <None Include="..\src\platforms\gcn\vscroll_up_default.png" />
+    <None Include="..\src\platforms\gcn\vscroll_up_pressed.png" />
+    <None Include="..\src\platforms\gtk\rlvm.desktop" />
+    <None Include="..\src\platforms\osx\CocoaRLVMInstance.mm" />
+    <None Include="..\src\platforms\osx\dmg-ds-store" />
+    <None Include="..\src\platforms\osx\Info.plist.in" />
+    <None Include="..\src\platforms\osx\SDLMain.mm" />
+    <None Include="..\src\platforms\osx\StubInfoPlist.strings" />
+    <None Include="..\src\systems\sdl\object.frag" />
+    <None Include="..\src\systems\sdl\subtractive.frag" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
